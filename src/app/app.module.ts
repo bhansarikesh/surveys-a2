@@ -9,14 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SurveysComponent } from './surveys/surveys.component';
 import { QuestionsComponent } from './questions/questions.component';
-import { CompletionComponent } from './completion/completion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SurveysComponent,
-    QuestionsComponent,
-    CompletionComponent
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
