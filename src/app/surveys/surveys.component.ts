@@ -26,9 +26,4 @@ export class SurveysComponent implements OnInit {
           console.error(error);
         });
   }
-
-  // calling from click event in html
-  // getSurveyQuestions(id: string): void {
-  //   this.router.navigate(['/survey',id]);
-  // }
 }

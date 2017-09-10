@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SurveyListService } from '../services/survey-list.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-// import { Router } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -18,7 +17,6 @@ export class QuestionsComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private surveyListService: SurveyListService,
-    // private router: Router
   ) { }
 
   survey = {
@@ -51,9 +49,7 @@ export class QuestionsComponent implements OnInit {
     this.surveyListService.postRequest(this.questionsUrl + this.survey.id + '/completions', submitObject)
       .then(response => {
         this.btnDisabled = false;
-        // this.router.navigate(['/survey',this.survey.id, 'completion']);
         this.submitted = true;
-        console.log(response);
       })
       .catch(error => {
         console.error(error);

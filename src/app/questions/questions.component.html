@@ -5,7 +5,7 @@
       <h2>{{survey.tagline}}</h2>
     </div>
 
-    <form ngNativeValidate (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit()">
       <div class="questions">
         <div *ngFor="let question of survey.questions; let i = index">
           <div class="question"> {{i + 1}}. {{question.title}} </div>
