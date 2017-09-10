@@ -1,0 +1,7 @@
+<div class='container text-center'>
+  <h2>Pick a Survey</h2>
+  <div *ngFor="let survey of surveyList">
+    <a class="btn" [routerLink]="['/survey', survey.id]" title="{{survey.tagline}}">{{survey.title}}</a>
+    <!-- <a class="btn btn-primary" (click)="getSurveyQuestions(survey.id); $event.stopPropagation()" title="{{survey.tagline}}">{{survey.title}}</a> -->
+  </div>
+</div>

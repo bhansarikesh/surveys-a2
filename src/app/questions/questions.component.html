@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="!submitted">
+    <div class="text-center">
+      <h1>{{survey.title | uppercase}}</h1>
+      <h2>{{survey.tagline}}</h2>
+    </div>
+
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+      <div class="questions">
+        <div *ngFor="let question of survey.questions; let i = index">
+          <div class="question"> {{i + 1}}. {{question.title}} </div>
+          <div *ngFor="let option of question.options">
+            <label>
+              <input type="radio" class="options" name="{{question.id}}" [(ngModel)]="question.option" value="{{option}}"> {{option}}
+            </label>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="btnDisabled" *ngIf="survey.questions && survey.questions.length">Submit</button>
+    </form>
+  </div>
+
+  <div class="text-center" *ngIf="submitted">
+    <p class="success-msg">Thanks for answering the survey!</p>
+    <a [routerLink]="['/surveys']">Take Another Surveys</a>
+  </div>
+</div>

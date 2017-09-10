@@ -1,0 +1,13 @@
+.question {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.options {
+  margin-left: 20px;
+}
+.success-msg {
+  background-color: green;
+  color: #dddddd;
+  border-radius: 5px;
+  margin-top: 30%;
+}
